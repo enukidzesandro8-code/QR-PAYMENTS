@@ -1,0 +1,23 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 20px 0;
+}
+
+.optionBtn {
+  width: 100%;
+  background: var(--color-btn-primary);
+  color: var(--color-text-on-dark);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 17px 20px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  letter-spacing: -0.2px;
+  transition: opacity 0.15s;
+}
+
+.optionBtn:active {
+  opacity: 0.75;
+}

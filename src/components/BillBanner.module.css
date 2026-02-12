@@ -1,0 +1,45 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--color-teal);
+  padding: 12px 16px;
+  flex-shrink: 0;
+}
+
+.text {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.85);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.loginBtn {
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid rgba(255,255,255,0.5);
+  white-space: nowrap;
+  letter-spacing: 0.1px;
+}
+
+.loginBtn:active {
+  background: rgba(255,255,255,0.35);
+}

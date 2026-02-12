@@ -1,0 +1,50 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 20px 0;
+}
+
+.optionBtn {
+  width: 100%;
+  background: var(--color-sheet-dark2);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  padding: 16px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: background 0.15s;
+}
+
+.optionBtn:active {
+  background: rgba(255,255,255,0.08);
+}
+
+.optionIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-on-dark);
+  flex-shrink: 0;
+}
+
+.optionLabel {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-on-dark);
+  text-align: left;
+  letter-spacing: -0.1px;
+}
+
+.optionArrow {
+  color: var(--color-text-on-dark-secondary);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
