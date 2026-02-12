@@ -12,16 +12,16 @@ export default function SuccessScreen({ amount, onClose }) {
           </div>
         </div>
 
-        <h2 className={styles.title}>Payment successful</h2>
+        <h2 className={styles.title}>გადახდა წარმატებულია</h2>
         {amount != null && (
-          <p className={styles.amount}>${amount.toFixed(2)}</p>
+          <p className={styles.amount}>₾{amount.toFixed(2)}</p>
         )}
         <p className={styles.subtitle}>
-          Your payment has been processed. Enjoy your meal!
+          თქვენი გადახდა წარმატებით განხორციელდა. გემრიელად!
         </p>
 
         <button className={styles.doneBtn} onClick={onClose}>
-          Done
+          დასრულება
         </button>
       </div>
     </div>

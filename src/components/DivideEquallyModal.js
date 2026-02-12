@@ -31,7 +31,7 @@ export default function DivideEquallyModal({
               <polyline points="10 3 5 8 10 13" />
             </svg>
           </button>
-          <span className="sheetTitle">Divide equally</span>
+          <span className="sheetTitle">თანაბრად გაყოფა</span>
           <button className="iconBtn" onClick={onClose} aria-label="Close">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
               <line x1="1" y1="1" x2="13" y2="13" />
@@ -43,7 +43,7 @@ export default function DivideEquallyModal({
         <div className="sheetDivider" />
 
         <div className={styles.body}>
-          <p className={styles.question}>How many people are splitting?</p>
+          <p className={styles.question}>რამდენი ადამიანი ყოფს ანგარიშს?</p>
 
           <div className={styles.counter}>
             <button
@@ -71,16 +71,16 @@ export default function DivideEquallyModal({
           </div>
 
           <div className={styles.perPersonCard}>
-            <span className={styles.perPersonLabel}>Each person pays</span>
-            <span className={styles.perPersonAmount}>${perPerson.toFixed(2)}</span>
+            <span className={styles.perPersonLabel}>თითოეული პირი იხდის</span>
+            <span className={styles.perPersonAmount}>₾{perPerson.toFixed(2)}</span>
           </div>
 
           <div className={styles.totalNote}>
-            Total bill: <strong>${totalAmount.toFixed(2)}</strong> ÷ {numPeople} people
+            სულ ანგარიში: <strong>₾{totalAmount.toFixed(2)}</strong> ÷ {numPeople} ადამიანი
           </div>
 
           <button className={styles.payBtn} onClick={onConfirm}>
-            Pay ${perPerson.toFixed(2)}
+            გადახდა ₾{perPerson.toFixed(2)}
           </button>
         </div>
       </div>

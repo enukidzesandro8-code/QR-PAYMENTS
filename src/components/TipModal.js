@@ -13,7 +13,7 @@ export default function TipModal({ amount, onConfirm, onClose }) {
         <div className="sheetHandle" />
 
         <div className="sheetHeader">
-          <span className="sheetTitle">Add a tip?</span>
+          <span className="sheetTitle">ჩაი დაამატო?</span>
           <button className="iconBtn" onClick={onClose} aria-label="Close">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
               <line x1="1" y1="1" x2="13" y2="13" />
@@ -25,7 +25,7 @@ export default function TipModal({ amount, onConfirm, onClose }) {
         <div className="sheetDivider" />
 
         <div className={styles.body}>
-          <p className={styles.subtitle}>Select a tip amount for your server</p>
+          <p className={styles.subtitle}>აირჩიე ჩაის ოდენობა მომსახურისთვის</p>
 
           <div className={styles.tipGrid}>
             {TIP_OPTIONS.map(opt => (
@@ -35,13 +35,13 @@ export default function TipModal({ amount, onConfirm, onClose }) {
                 onClick={() => onConfirm(opt.value)}
               >
                 <span className={styles.tipPercent}>{opt.label}</span>
-                <span className={styles.tipAmount}>${(amount * opt.value).toFixed(2)}</span>
+                <span className={styles.tipAmount}>₾{(amount * opt.value).toFixed(2)}</span>
               </button>
             ))}
           </div>
 
           <button className={styles.noThanksBtn} onClick={() => onConfirm(0)}>
-            No thanks
+            არა, მადლობა
           </button>
         </div>
       </div>

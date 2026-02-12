@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'QR Pay',
-  description: 'Pay your restaurant bill with ease',
+  title: 'QR გადახდა',
+  description: 'გადაიხადე რესტორნის ანგარიში მარტივად',
 };
 
 export const viewport = {
@@ -15,7 +15,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="ka">
       <body>{children}</body>
     </html>
   );

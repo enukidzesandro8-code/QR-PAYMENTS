@@ -15,7 +15,7 @@ export default function BillItems({ items }) {
             {item.name}
           </span>
           <span className={styles.price}>
-            ${(item.price * item.quantity).toFixed(2)}
+            ₾{(item.price * item.quantity).toFixed(2)}
           </span>
         </div>
       ))}

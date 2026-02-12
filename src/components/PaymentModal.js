@@ -7,7 +7,7 @@ export default function PaymentModal({ onClose, onSplit, onPayFull }) {
         <div className="sheetHandle" />
 
         <div className="sheetHeader">
-          <span className="sheetTitle">Pay your bill</span>
+          <span className="sheetTitle">გადაიხადე ანგარიში</span>
           <button className="iconBtn" onClick={onClose} aria-label="Close">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
               <line x1="1" y1="1" x2="13" y2="13" />
@@ -20,10 +20,10 @@ export default function PaymentModal({ onClose, onSplit, onPayFull }) {
 
         <div className={styles.body}>
           <button className={styles.optionBtn} onClick={onSplit}>
-            Split the bill
+            გაყავი ანგარიში
           </button>
           <button className={styles.optionBtn} onClick={onPayFull}>
-            Pay full bill
+            სრული ანგარიშის გადახდა
           </button>
         </div>
       </div>

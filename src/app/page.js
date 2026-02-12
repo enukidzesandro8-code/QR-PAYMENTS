@@ -75,12 +75,12 @@ export default function BillPage() {
 
         <main className={styles.main}>
           <div className={styles.tableInfo}>
-            <span className={styles.tableLabel}>Table {restaurant.tableNumber}</span>
+            <span className={styles.tableLabel}>მაგიდა {restaurant.tableNumber}</span>
           </div>
 
           <div className={styles.billSummary}>
-            <span className={styles.leftToPayLabel}>Left to pay</span>
-            <span className={styles.totalAmount}>${totalAmount.toFixed(2)}</span>
+            <span className={styles.leftToPayLabel}>გადასახდელი</span>
+            <span className={styles.totalAmount}>₾{totalAmount.toFixed(2)}</span>
           </div>
 
           <BillItems items={billItems} />
@@ -90,7 +90,7 @@ export default function BillPage() {
               className={styles.payBtn}
               onClick={() => setModal(MODAL.PAYMENT)}
             >
-              Pay or split bill
+              გადახდა ან გაყოფა
             </button>
           </div>
         </main>

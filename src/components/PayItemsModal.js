@@ -36,7 +36,7 @@ export default function PayItemsModal({
               <polyline points="10 3 5 8 10 13" />
             </svg>
           </button>
-          <span className="sheetTitle">Pay for your items</span>
+          <span className="sheetTitle">გადაიხადე შენი პროდუქტები</span>
           <button className="iconBtn" onClick={onClose} aria-label="Close">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
               <line x1="1" y1="1" x2="13" y2="13" />
@@ -56,7 +56,7 @@ export default function PayItemsModal({
                 <div className={styles.itemInfo}>
                   <span className={styles.itemName}>{item.name}</span>
                   <span className={styles.itemPrice}>
-                    ${(item.price * item.quantity).toFixed(2)}
+                    ₾{(item.price * item.quantity).toFixed(2)}
                   </span>
                 </div>
                 <button
@@ -83,15 +83,15 @@ export default function PayItemsModal({
         {/* Fixed footer */}
         <div className={styles.footer}>
           <div className={styles.totalRow}>
-            <span className={styles.totalLabel}>Total bill</span>
-            <span className={styles.totalValue}>${selectedTotal.toFixed(2)}</span>
+            <span className={styles.totalLabel}>სულ ანგარიში</span>
+            <span className={styles.totalValue}>₾{selectedTotal.toFixed(2)}</span>
           </div>
           <button
             className={`${styles.confirmBtn} ${!hasSelection ? styles.confirmBtnDisabled : ''}`}
             onClick={hasSelection ? onConfirm : undefined}
             disabled={!hasSelection}
           >
-            Confirm
+            დადასტურება
           </button>
         </div>
       </div>

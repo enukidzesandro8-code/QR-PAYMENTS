@@ -12,7 +12,7 @@ export default function SplitModal({ onClose, onBack, onPayItems, onDivideEquall
               <polyline points="10 3 5 8 10 13" />
             </svg>
           </button>
-          <span className="sheetTitle">Split the bill</span>
+          <span className="sheetTitle">გაყავი ანგარიში</span>
           <button className="iconBtn" onClick={onClose} aria-label="Close">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
               <line x1="1" y1="1" x2="13" y2="13" />
@@ -35,7 +35,7 @@ export default function SplitModal({ onClose, onBack, onPayItems, onDivideEquall
                 <line x1="3" y1="18" x2="3.01" y2="18" />
               </svg>
             </span>
-            <span className={styles.optionLabel}>Pay for your items</span>
+            <span className={styles.optionLabel}>გადაიხადე შენი პროდუქტები</span>
             <span className={styles.optionArrow}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="6 3 11 8 6 13" />
@@ -51,7 +51,7 @@ export default function SplitModal({ onClose, onBack, onPayItems, onDivideEquall
                 <path d="M11 12h2" />
               </svg>
             </span>
-            <span className={styles.optionLabel}>Divide the bill equally</span>
+            <span className={styles.optionLabel}>გაყავი ანგარიში თანაბრად</span>
             <span className={styles.optionArrow}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="6 3 11 8 6 13" />
