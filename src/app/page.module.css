@@ -1,0 +1,73 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: var(--color-page-bg);
+}
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: calc(var(--bottom-nav-h) + env(safe-area-inset-bottom, 0px) + 20px);
+  -webkit-overflow-scrolling: touch;
+}
+
+.main {
+  padding: 20px 20px 0;
+}
+
+.tableInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.tableLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.billSummary {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.leftToPayLabel {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.totalAmount {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+}
+
+.payButtonWrapper {
+  padding: 24px 0 0;
+}
+
+.payBtn {
+  width: 100%;
+  background: var(--color-btn-primary);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 17px 20px;
+  border-radius: var(--radius-md);
+  letter-spacing: -0.2px;
+  transition: opacity 0.15s;
+}
+
+.payBtn:active {
+  opacity: 0.8;
+}

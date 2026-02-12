@@ -1,0 +1,102 @@
+.body {
+  padding: 24px 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question {
+  font-size: 15px;
+  color: var(--color-text-on-dark-secondary);
+  text-align: center;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.counterBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-on-dark);
+  transition: background 0.15s;
+}
+
+.counterBtn:active:not(:disabled) {
+  background: rgba(255,255,255,0.22);
+  opacity: 1;
+}
+
+.counterBtnDisabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.counterValue {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--color-text-on-dark);
+  min-width: 60px;
+  text-align: center;
+  letter-spacing: -2px;
+}
+
+.perPersonCard {
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.perPersonLabel {
+  font-size: 13px;
+  color: var(--color-text-on-dark-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+
+.perPersonAmount {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text-on-dark);
+  letter-spacing: -1.5px;
+}
+
+.totalNote {
+  font-size: 13px;
+  color: var(--color-text-on-dark-secondary);
+  text-align: center;
+}
+
+.totalNote strong {
+  color: var(--color-text-on-dark);
+  font-weight: 600;
+}
+
+.payBtn {
+  width: 100%;
+  background: var(--color-teal);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  letter-spacing: -0.2px;
+  transition: opacity 0.15s;
+}
+
+.payBtn:active {
+  opacity: 0.8;
+}

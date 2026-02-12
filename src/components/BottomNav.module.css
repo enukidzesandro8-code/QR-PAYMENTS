@@ -1,0 +1,40 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(var(--bottom-nav-h) + env(safe-area-inset-bottom, 0px));
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 8px;
+  z-index: 50;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 28px;
+  color: var(--color-text-light);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s;
+}
+
+.tab:active {
+  opacity: 1;
+}
+
+.tab span {
+  line-height: 1;
+}
+
+.active {
+  color: var(--color-text);
+}
