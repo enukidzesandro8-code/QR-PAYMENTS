@@ -2,13 +2,13 @@
 
 import { useState } from 'react';
 import BillHeader from '@/components/BillHeader';
-import BillBanner from '@/components/BillBanner';
 import BillItems from '@/components/BillItems';
 import BottomNav from '@/components/BottomNav';
 import PaymentModal from '@/components/PaymentModal';
 import SplitModal from '@/components/SplitModal';
 import PayItemsModal from '@/components/PayItemsModal';
 import DivideEquallyModal from '@/components/DivideEquallyModal';
+import TipModal from '@/components/TipModal';
 import SuccessScreen from '@/components/SuccessScreen';
 import { restaurant, billItems } from '@/data/mockBill';
 import styles from './page.module.css';
@@ -20,6 +20,7 @@ const MODAL = {
   SPLIT: 'split',
   PAY_ITEMS: 'payItems',
   DIVIDE_EQUAL: 'divideEqual',
+  TIP: 'tip',
   SUCCESS: 'success',
 };
 
@@ -42,16 +43,21 @@ export default function BillPage() {
 
   const handlePayFull = () => {
     setPaidAmount(totalAmount);
-    setModal(MODAL.SUCCESS);
+    setModal(MODAL.TIP);
   };
 
   const handleConfirmItems = () => {
     setPaidAmount(selectedTotal);
-    setModal(MODAL.SUCCESS);
+    setModal(MODAL.TIP);
   };
 
   const handleConfirmDivide = () => {
     setPaidAmount(perPersonAmount);
+    setModal(MODAL.TIP);
+  };
+
+  const handleConfirmTip = (tipPercent) => {
+    setPaidAmount(prev => prev * (1 + tipPercent));
     setModal(MODAL.SUCCESS);
   };
 
@@ -66,7 +72,6 @@ export default function BillPage() {
     <div className={styles.page}>
       <div className={styles.scrollArea}>
         <BillHeader restaurant={restaurant} />
-        <BillBanner />
 
         <main className={styles.main}>
           <div className={styles.tableInfo}>
@@ -131,6 +136,14 @@ export default function BillPage() {
           onClose={() => setModal(MODAL.NONE)}
           onBack={() => setModal(MODAL.SPLIT)}
           onConfirm={handleConfirmDivide}
+        />
+      )}
+
+      {modal === MODAL.TIP && (
+        <TipModal
+          amount={paidAmount}
+          onConfirm={handleConfirmTip}
+          onClose={() => setModal(MODAL.NONE)}
         />
       )}
 

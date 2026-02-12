@@ -1,0 +1,64 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 20px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin: 0;
+}
+
+.tipGrid {
+  display: flex;
+  gap: 10px;
+}
+
+.tipBtn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 8px;
+  background: var(--color-btn-primary);
+  color: var(--color-text-on-dark);
+  border-radius: var(--radius-md);
+  transition: opacity 0.15s;
+}
+
+.tipBtn:active {
+  opacity: 0.75;
+}
+
+.tipPercent {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.tipAmount {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.noThanksBtn {
+  width: 100%;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-border, #e5e5e5);
+  text-align: center;
+  transition: opacity 0.15s;
+}
+
+.noThanksBtn:active {
+  opacity: 0.7;
+}
